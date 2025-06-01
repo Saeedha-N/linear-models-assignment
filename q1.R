@@ -43,7 +43,16 @@ anova(model_no_female_hs_clean, full_model_clean)
 confint(full_model_clean, "Income", level = 0.95)
 
 # (d)
+model_no_income_clean <- lm(Sales ~ Age + HS + Black + Female + Price, data = ex1_clean)
+summary(model_no_income_clean)
 
+# (e)
+model_price_age_income_clean <- lm(Sales ~ Price + Age + Income, data = ex1_clean)
+summary(model_price_age_income_clean) 
+
+# (f)
+model_income_only_clean <- lm(Sales ~ Income, data = ex1_clean)
+summary(model_income_only_clean)
 
 
 
