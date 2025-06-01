@@ -31,3 +31,19 @@ ols_plot_cooksd_bar(full_model_clean)
 influencePlot(full_model_clean)
 influenceIndexPlot(full_model_clean)
 
+# (a) 
+model_no_female_clean <- lm(Sales ~ Age + HS + Income + Black + Price, data = ex1_clean)
+anova(model_no_female_clean, full_model_clean)
+
+# (b)
+model_no_female_hs_clean <- lm(Sales ~ Age + Income + Black + Price, data = ex1_clean)
+anova(model_no_female_hs_clean, full_model_clean)
+
+# (c)
+confint(full_model_clean, "Income", level = 0.95)
+
+# (d)
+
+
+
+
